@@ -14,41 +14,11 @@
   font-style: normal;
 }
 
-body {
-  width: 1100px;
-  margin: 0 auto;
-  background-color: #fff;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-blockquote {
-  margin: 0;
-  padding: 0;
-}
-
-.content {
-  box-sizing: border-box;
-  width: 1100px;
-  min-height: 1100px;
-  margin: auto;
-}
-
 .site-header {
-  height: 293px;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 20px 40px;
+  padding: 92px 50px 96px;
   background-color: #fff;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -57,11 +27,7 @@ blockquote {
 }
 
 .header__menu {
-  position: absolute;
-  top: 117px;
-  left: 50px;
-  width: 138px;
-  gap: 20px;
+  padding-top: 133px 658px 138px 50px;
   white-space: nowrap;
 }
 
@@ -76,16 +42,15 @@ blockquote {
 }
 
 .header__logo {
-  position: absolute;
+  display: block;
   width: 148px;
   height: 105px;
-  top: 80px;
-  left: 478px;
 }
 
 .header__logo-image {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
+  object-fit: contain;
   display: block;
 }
 
@@ -111,12 +76,9 @@ blockquote {
 }
 
 .header__address {
-  position: absolute;
-  width: 240px;
-  height: 98px;
-  top: 80px;
-  left: 810px;
-  right: 50px;
+  justify-self: flex-end;
+  max-width: 240px;
+  width: 100%;
   font-family: "Raleway", sans-serif;
   gap: 10px;
   overflow-wrap: break-word;
@@ -144,11 +106,13 @@ blockquote {
 .cover {
   position: relative;
   width: 1100px;
-  height: 757px;
   background: url(../images/cover.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: grid;
+  padding: 165px 50px 50px;
+  gap: 106px;
 }
 
 .overlay {
@@ -169,10 +133,11 @@ blockquote {
   line-height: 1.15;
   color: #fff;
   text-transform: uppercase;
+  display: grid;
+  gap: 20px;
 }
 
 .aligned-text {
-  position: absolute;
   display: block;
 
   white-space: nowrap;
@@ -180,23 +145,16 @@ blockquote {
 
 .aligned-text_left {
   text-align: left;
-  top: 165px;
-  left: 50px;
-  width: 477px;
 }
 
 .aligned-text_center {
   text-align: center;
-  top: 300px;
-  left: 380px;
-  width: auto;
+  margin-right: -30px;
 }
 
 .aligned-text_right {
   text-align: right;
-  top: 435px;
-  left: 663px;
-  width: 387px;
+  margin-right: -30px;
 }
 
 .letter-spacing-extended {
@@ -207,10 +165,6 @@ blockquote {
   letter-spacing: 0;
 }
 .cover__description {
-  position: absolute;
-  top: 656px;
-  left: 50px;
-  width: 1000px;
   z-index: 2;
   gap: 25px;
   display: flex;
@@ -220,9 +174,7 @@ blockquote {
 
 .cover__description-text {
   word-spacing: 20px;
-
   white-space: nowrap;
-  line-height: 1.4;
   font: 400 22px / 1.27273 "Raleway", sans-serif;
   text-transform: uppercase;
   color: #fff;
@@ -246,17 +198,18 @@ blockquote {
 
 .lots {
   position: relative;
-  width: 1052px;
+  width: 1100px;
   margin: 0 auto;
   padding: 180px 24px 120px 24px;
   box-sizing: border-box;
 }
 
 .lots__heading {
-  margin: -16px 0 27px 16px;
   font: 700 40px "Raleway", sans-serif;
   text-transform: uppercase;
   color: #000;
+  margin-bottom: 27px;
+  padding-left: 40px;
 }
 
 .lots__card-list {
@@ -265,7 +218,6 @@ blockquote {
   gap: 25px;
   list-style: none;
   padding: 0;
-  margin: 0 0 0 -24px;
   box-sizing: border-box;
 }
 
@@ -337,9 +289,8 @@ blockquote {
 
 .lots__look-more-link {
   display: inline-block;
-  margin: 30px 0 0px 16px;
+  margin: 30px 0 0px 40px;
   text-decoration: underline;
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
   color: #000;
@@ -351,11 +302,11 @@ blockquote {
   grid-template-columns: 334px 1fr;
   gap: 25px;
   align-items: start;
-  justify-items: start;
-  max-width: 1052px;
+  justify-items: center;
+  max-width: 1100px;
   width: 100%;
   margin: 35px auto;
-  padding: 0 24px 0 47px;
+  padding: 0 24px 0 24px;
 }
 
 .about__column-left {
@@ -368,7 +319,6 @@ blockquote {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin-left: -47px;
 }
 
 .about__logo {
@@ -388,7 +338,6 @@ blockquote {
 
 .about__title {
   margin-top: 101px;
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
@@ -397,23 +346,20 @@ blockquote {
 .about__text {
   display: flex;
   flex-direction: column;
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
   color: #000;
   width: 693px;
   margin-top: 50px;
   white-space: normal;
-  letter-spacing: 1px;
-  word-spacing: 1px;
-  line-height: 1.4;
   text-align: left;
+  gap: 24px;
 }
 
 .about__text p {
-  margin: 0 0 24px 0;
-  font-size: 18px;
-  line-height: 1.4;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .footer {
@@ -423,14 +369,12 @@ blockquote {
   gap: 20px;
   padding: 20px 50px;
   max-width: 1100px;
-  margin: 120px auto 0;
+  margin: 160px auto 0;
+  padding: 20px 50px 82px;
 }
 
 .footer address {
-  padding-top: 6px;
-
   font-style: normal;
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   line-height: 135%;
@@ -447,14 +391,13 @@ blockquote {
 
 .footer__address-line {
   display: block;
-} 
+}
 
 .footer__menu-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   text-align: start;
@@ -466,13 +409,12 @@ blockquote {
   padding: 0;
 }
 
-.footer__menu-link{
-  text-decoration: none; /* базовое состояние */
+.footer__menu-link {
+  text-decoration: none;
   color: #000;
 }
 
 .footer__menu-link_active {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   line-height: 135%;
